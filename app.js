@@ -142,6 +142,8 @@ app.post("/image", uploadStorage.array('image', 2), (req, res) => {
 
 console.log("working");
 
-app.listen(3000, function(req, res) {
+const port = process.env.PORT || 3000;
+
+app.listen(port, function(req, res) {
     console.log("server is set on port 3000");
 });
